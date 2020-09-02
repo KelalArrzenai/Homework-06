@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    if (response.list[i].dt_txt.indexOf("15:00:00") !== -1) {
+                    var card = $("<div>").attr("class", "card text-light text-center border border-dark bg-primary");
+                    $("#forecast").append(card);
+                    var cardBody = $("<div>").attr("class", "card-body");
+                    card.append(cardBody);
+                    var cardDate = $("<h4>").attr("class", "card-title text-center p-2").text(currentDate);
+                    cardBody.append(cardDate);
+                    cardBody.append(weatherIcon);
+                    var cardTemp = $("<p>").attr("class", "card-text").text("Temp: " + tempF.toFixed(2) + " \xB0F");
+                    cardBody.append(cardTemp);
+                    var cardHumidity = $("<p>").attr("class", "card-text").text("Humidity: " + response.list[i].main.humidity + " %");
+                    cardBody.append(cardHumidity);
+                }
+    </script>
+</body>
+</html>
